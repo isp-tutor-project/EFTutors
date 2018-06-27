@@ -1,0 +1,99 @@
+{
+	bootLoader: {
+		accountMode: 'LOCAL',
+	},
+
+	tutors: {
+		STD_LOGIN: {
+			path: 'Std_Login',
+			_supplSet: 'STD_LOGIN_SUPPS',
+			_moduleSet: 'STD_LOGIN_MODS',
+			xface: 'TEST_LCL',
+		},
+		PREPOST: {
+			path: 'PrePost',
+			_supplSet: 'PREPOST_SUPPS',
+			_moduleSet: 'PREPOST_MODS',
+			xface: 'TEST_LCL',
+		},
+	},
+
+	supplSets: {
+		STD_LOGIN_SUPPS: {
+			_supplScripts: 'STD_LOGIN_SUPP',
+		},
+		PREPOST_SUPPS: {
+			_supplScripts: 'PREPOST_SUPP',
+		},
+	},
+	supplScripts: {
+		STD_LOGIN_SUPP: {
+			extNameSpace: 'EFTut_Suppl',
+			intNameSpace: 'sceneExt',
+			parentFldr: 'ISP_Tutor',
+			type: 'application/javascript',
+			URL: 'EFTutors/STD_Login/EFTut_Suppl.js',
+		},
+		PREPOST_SUPP: {
+			extNameSpace: 'EFTut_Suppl',
+			intNameSpace: 'sceneExt',
+			parentFldr: 'ISP_Tutor',
+			type: 'application/javascript',
+			URL: 'EFTutors/PrePost/EFTut_Suppl.js',
+		},
+	},
+
+	moduleSets: {
+		STD_LOGIN_MODS: {
+			_anModules: 'EFMOD_SIGNIN, EFMOD_SCENETEST',
+		},
+		PREPOST_MODS: {
+			_anModules: 'EFMOD_PREPOST',
+		},
+
+	},
+	anModules: {
+		EFMOD_SIGNIN: {
+			name: 'EFMod_SignIn',
+			parentFldr: 'ISP_Tutor',
+			type: 'application/javascript',
+			compID: '8413BCBA72CC587897F41BF9190750A5',
+			URL: 'EFMod_SignIn.js',
+		},
+		EFMOD_SCENETEST: {
+			name: 'EFMod_SceneTest',
+			parentFldr: 'ISP_Tutor',
+			type: 'application/javascript',
+			compID: 'ADCEC5F55B066D0D1D87308464BFAB2B',
+			URL: 'EFMod_SceneTest.js',
+		},
+		EFMOD_PREPOST: {
+			name: 'EFMod_PrePost',
+			parentFldr: 'ISP_Tutor',
+			type: 'application/javascript',
+			compID: '003340B071B3BA476B76579AF714ED87',
+			URL: 'EFMod_PrePost.js',
+		},
+	},
+
+	features: {
+		STD_LOGIN: {
+			part: 'login',
+			features: '',
+		},
+	},
+	
+	interfaces: {
+		TEST_LCL: {
+			demo: 'false',
+			debug: 'false',
+			log: 'REMOTE',
+			remote: 'false',
+			forcebackbutton: 'false',
+			hpcheck: true,
+			sdcheck: true,
+			fscheck: true,
+			skillometer: false,
+		},
+	},
+}
