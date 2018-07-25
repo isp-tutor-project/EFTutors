@@ -9,7 +9,6 @@
 	"CNodes":
 	{	
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CNodes  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CNodes  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 
 				
 					
@@ -42,7 +41,6 @@
 	"CModules":
 	{		
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 	
 		"base":
 		{
@@ -50,9 +48,7 @@
 			"reuse":true,			
 			"scenes":		
 			[
-				{"title":"", "page":"", "name":"SoundCheck", 		"classname":"EFMod_SignIn.SoundCheck"	, "features":"null", "enqueue":"false", "create":"false", "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"", "page":"", "name":"SignIn", 			"classname":"EFMod_SignIn.SignIn"		, "features":"null", "enqueue":"false", "create":"false", "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"},		
-				{"title":"", "page":"", "name":"HeadPhoneCheck"  , "classname":"EFMod_SignIn.HeadPhoneCheck", "features":"null", "enqueue":"true" , "create":"true", "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "name":"Navigator"  , "classname":"EFMod_CodeTest.Navigator", "features":"null", "enqueue":"true" , "create":"true", "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},	
 			
@@ -62,9 +58,9 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"Start of Tutor", "page":"", "name":"Scene1"   , "classname":"EFMod_SceneTest.Scene1", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor", "page":"", "name":"Scene2"   , "classname":"EFMod_SceneTest.Scene2", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor", "page":"", "name":"Scene3"   , "classname":"EFMod_SceneTest.Scene3", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"Start of Tutor", "page":"", "name":"Scene1"   , "classname":"EFMod_CodeTest.Scene1", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor", "page":"", "name":"Scene2"   , "classname":"EFMod_CodeTest.Scene2", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor", "page":"", "name":"Scene3"   , "classname":"EFMod_CodeTest.Scene3", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},
 	
@@ -74,7 +70,7 @@
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "name":"Scene4"  , "classname":"EFMod_SceneTest.Scene4", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "name":"Scene4"  , "classname":"EFMod_CodeTest.Scene4", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		
@@ -82,7 +78,6 @@
 
 	"CModuleGroups":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModuleGroups  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModuleGroups  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 	
 		"solcom-modgrp":
@@ -100,13 +95,12 @@
 				{"instanceNode":"", "name":"SOLCOM_B"},
 				{"instanceNode":"", "name":"SOLCOM_C"}
 			]
-		},	
+		}	
 	},
 
 
 	"CActions":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CActions  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CActions  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 	
 		"act0":{"cmd":"assertFeature",
@@ -125,7 +119,6 @@
 	"CConstraints":
 	{
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CConstraints  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CConstraints  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 			
 		"FTR_PRETEST":{"cmd":"test", "code":"FTR_PRETEST"},
 		"SKILL_R0_FAIL" :{"cmd":"exec","code":"{return (gTutor.ktSkills['rule0'].queryBelief() < 0.93);}"},
@@ -134,7 +127,6 @@
 
 	"CSubGraphs":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CSubGraphs  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CSubGraphs  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 			
 	},
@@ -142,14 +134,12 @@
 	
 	"CExternals":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CExternals  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CExternals  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CExternals  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 	},
 	
 	
 	"CSkills":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CSkills  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CSkills  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 	
 		"rule0":

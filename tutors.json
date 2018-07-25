@@ -1,9 +1,0 @@
-{
-	"bootLoader": {
-		"accountMode": 'LOCAL',
-	},
-
-	"tutors": [
-		"EFStd_Login","EFPre_Post","EFCode_Test"
-    ]
-}
