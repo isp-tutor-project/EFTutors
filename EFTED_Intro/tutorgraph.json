@@ -10,14 +10,16 @@
 	{	
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CNodes  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 
-        "nav_loader":{"COMMENT":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Navigation Components preload node - used to force nav scene creation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
-            "type":"module",
-            "name":"base",
-            "edges":
-                    [
-                    ]
-            },
-                    
+				
+					
+		"_nav":{"COMMENT":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Navigation Components preload node - used to force nav scene creation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+				"type":"module",
+				"name":"base",
+				"edges":
+						[
+						]
+				},
+			
 		"root":{"COMMENT":"Standard Start Screen",
 				"type":"module", 
 				"name":"start",
@@ -46,7 +48,7 @@
 			"reuse":true,			
 			"scenes":		
 			[
-				{"title":"", "page":"", "name":"SNavigator", "classname":"EFMod_RQSelect.Navigator", "features":"", "enqueue":"false" , "create":"true" , "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null" }
+				{"title":"", "page":"", "name":"SNavigator",   "classname":"EFMod_TEDIntro.Navigator", "features":"null", "enqueue":"false" , "create":"true" , "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},	
 			
@@ -56,7 +58,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"RQIntro", "page":"", "name":"SScene1", "classname":"EFMod_RQSelect.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"Start of Tutor", "page":"", "name":"SScene1"   , "classname":"EFMod_TEDIntro.TedIntro", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},
 	
@@ -66,7 +68,7 @@
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_TEDInstr.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_TEDIntro.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		

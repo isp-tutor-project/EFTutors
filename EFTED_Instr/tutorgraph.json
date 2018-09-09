@@ -10,14 +10,16 @@
 	{	
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CNodes  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 
-        "nav_loader":{"COMMENT":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Navigation Components preload node - used to force nav scene creation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
-            "type":"module",
-            "name":"base",
-            "edges":
-                    [
-                    ]
-            },
-                    
+				
+					
+		"nav_loader":{"COMMENT":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Navigation Components preload node - used to force nav scene creation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+				"type":"module",
+				"name":"base",
+				"edges":
+						[
+						]
+				},
+			
 		"root":{"COMMENT":"Standard Start Screen",
 				"type":"module", 
 				"name":"start",
@@ -46,7 +48,7 @@
 			"reuse":true,			
 			"scenes":		
 			[
-				{"title":"", "page":"", "name":"SNavigator", "classname":"EFMod_RQSelect.Navigator", "features":"", "enqueue":"false" , "create":"true" , "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null" }
+				{"title":"", "page":"", "name":"SNavigator", "classname":"EFMod_TEDInstr.Navigator", "features":"", "enqueue":"false" , "create":"true" , "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null" }
 			]
 		},	
 			
@@ -56,7 +58,14 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"RQIntro", "page":"", "name":"SScene1", "classname":"EFMod_RQSelect.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"Science Area Selection", "page":"", "name":"SScene1a"  , "classname":"EFMod_TEDInstr.Scene1a",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor",         "page":"", "name":"SScene1"   , "classname":"EFMod_TEDInstr.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor",         "page":"", "name":"SScene2"   , "classname":"EFMod_TEDInstr.Scene2",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor",         "page":"", "name":"SScene3"   , "classname":"EFMod_TEDInstr.Scene3",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor",         "page":"", "name":"SScene4"   , "classname":"EFMod_TEDInstr.Scene4",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor",         "page":"", "name":"SScene5"   , "classname":"EFMod_TEDInstr.Scene5",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor",         "page":"", "name":"SScene6"   , "classname":"EFMod_TEDInstr.Scene6",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_TEDInstr.Scene7",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},
 	

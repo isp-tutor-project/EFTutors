@@ -1,0 +1,75 @@
+<SBS_COMMON_TABLE4>
+			<create>		
+				<symbol named="SD1tableA" wozname="STEPBYSTEPTABLE4" type="table" features="" >
+					<table rows="5" cols="3" dblclick="false" feedback="SBS" >
+						<column>
+							<row definedby="system" samediff="" colhdr="true" rowhdr="false" label="Ramp Part" showlabel="true" showicon="false" showselector="false" listen="none" font="arial" size="12" bold="true" color="0x000000"/>
+							<row definedby="system" samediff="" colhdr="false" rowhdr="true" label="{{Svar1}}" showlabel="true" showicon="false" showselector="false" listen="none" font="arial" size="12" bold="true" color="0x000000"/>
+							<row definedby="system" samediff="" colhdr="false" rowhdr="true" label="{{Svar2}}" showlabel="true" showicon="false" showselector="false" listen="none" font="arial" size="12" bold="true" color="0x000000"/>
+							<row definedby="system" samediff="" colhdr="false" rowhdr="true" label="{{Svar3}}" showlabel="true" showicon="false" showselector="false" listen="none" font="arial" size="12" bold="true" color="0x000000"/>
+							<row definedby="system" samediff="" colhdr="false" rowhdr="true" label="{{Svar4}}" showlabel="true" showicon="false" showselector="false" listen="none" font="arial" size="12" bold="true" color="0x000000"/>
+						</column>
+
+						<column>
+							<row definedby="system" colhdr="true" rowhdr="false"  label="Ramp 1" showlabel="true" showicon="false" showselector="false" listen="none" font="arial" size="12" bold="true" color="0x000000"/>
+							<row definedby="none"  colhdr="false" rowhdr="false" label="" obj="Sslope" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Steep" 	 obj="Ssteep"/>
+								<value label="Not Steep" obj="SnotSteep"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Ssurface" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Sif" 		obj="Ssif"/>
+								<value label="Fim"	 	obj="Sfim"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Sstart" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Top"		obj="S_top"/>
+								<value label="Middle"	obj="Smiddle"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Sball" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Bab"		obj="Sbab"/>
+								<value label="Lof"		obj="Slof"/>
+							</row>
+						</column>
+
+						<column deflabel="">
+							<row definedby="system" colhdr="true" rowhdr="false" label="Ramp 2" showlabel="true" showicon="false" showselector="false" listen="none" font="arial" size="12" bold="true" color="0x000000"/>
+							<row definedby="none"  colhdr="false" rowhdr="false" label="" obj="Sslope" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Steep"  	 obj="Ssteep"/>
+								<value label="Not Steep" obj="SnotSteep"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Ssurface" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Sif" 		obj="Ssif"/>
+								<value label="Fim"	 	obj="Sfim"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Sstart" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Top"		obj="S_top"/>
+								<value label="Middle"	obj="Smiddle"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Sball" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Bab"		obj="Sbab"/>
+								<value label="Lof"		obj="Slof"/>
+							</row>
+						</column>
+
+						<column deflabel="">
+							<row definedby="system" colhdr="true" rowhdr="false" label="Same Different" showlabel="true" showicon="false" showselector="false" listen="none" font="arial" size="12" bold="true" color="0x000000"/>
+							<row definedby="none"  colhdr="false" rowhdr="false" label="" obj="Same Different" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Same" 	 obj="Ssame"/>
+								<value label="Different" obj="Sdifferent"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Same Different" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Same" 	 obj="Ssame"/>
+								<value label="Different" obj="Sdifferent"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Same Different" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Same" 	 obj="Ssame"/>
+								<value label="Different" obj="Sdifferent"/>
+							</row>
+							<row definedby="none" colhdr="false" rowhdr="false" label="" obj="Same Different" showlabel="true" showicon="false" showselector="false" listen="cellClick" font="arial" size="12" bold="true" color="0xCCCCCC">
+								<value label="Same" 	 obj="Ssame"/>
+								<value label="Different" obj="Sdifferent"/>
+							</row>
+						</column>
+				   	</table>
+				</symbol>			
+			</create>
+		</SBS_COMMON_TABLE4>
