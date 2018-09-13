@@ -56,7 +56,16 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"RQIntro", "page":"", "name":"SScene1", "classname":"EFMod_RQSelect.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"RQIntro", "page":"", "name":"SScene1",  "classname":"EFMod_RQSelect.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene2",  "classname":"EFMod_RQSelect.Scene2",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene3",  "classname":"EFMod_RQSelect.Scene3",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene4",  "classname":"EFMod_RQSelect.Scene4",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene5",  "classname":"EFMod_RQSelect.Scene5",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene6",  "classname":"EFMod_RQSelect.Scene6",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene7",  "classname":"EFMod_RQSelect.Scene7",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene8",  "classname":"EFMod_RQSelect.Scene8",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene9",  "classname":"EFMod_RQSelect.Scene9",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"RQIntro", "page":"", "name":"SScene10", "classname":"EFMod_RQSelect.Scene10",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},
 	
@@ -66,7 +75,7 @@
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_TEDInstr.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_RQSelect.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		
