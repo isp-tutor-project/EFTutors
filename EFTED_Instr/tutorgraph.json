@@ -1,9 +1,9 @@
 {
 	"type":"graph",
 	"history":"volatile",
-	"name":"TED Final",
+	"name":"TED ISP",
 	"version":"0.1.0",
-	"namespace":"TED Final",
+	"namespace":"TED ISP TUTOR",
 
 
 	"CNodes":
@@ -19,15 +19,661 @@
 						[
 						]
 				},
-			
-		"root":{"COMMENT":"Standard Start Screen",
+
+                
+        "COMMENT0A":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+                
+
+		"root":{"COMMENT":"TED Intro",
 				"type":"module", 
 				"name":"start",
 				"edges":
 						[													
-							{"constraint":"","edge":"END_CLOAK"}							
+							{"constraint":"FTR_CRYSTAL","edge":"TEDQ1_CRYSTAL"},
+							{"constraint":"FTR_SODA",   "edge":"TEDQ1_SODA"},
+							{"constraint":"FTR_ICEMELT","edge":"TEDQ1_ICEMELT"},
+							{"constraint":"FTR_BALLOON","edge":"TEDQ1_BALLOON"},
+							{"constraint":"FTR_RAMPS",  "edge":"TEDQ1_RAMPS"},
+							{"constraint":"FTR_SINKING","edge":"TEDQ1_SINKING"},
+							{"constraint":"FTR_GRHOUSE","edge":"TEDQ1_GRHOUSE"},
+							{"constraint":"FTR_ALGAE",  "edge":"TEDQ1_ALGAE"}
+						]
+                },
+                
+
+
+        "COMMENT0":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+
+
+		"TEDQ1_CRYSTAL":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_CRYSTAL",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ1_CRYSTAL_RIGHT"},
+							{"constraint":"","edge":"TEDQ1_CRYSTAL_WRONG"}
 						]
 				},
+
+		"TEDQ1_CRYSTAL_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_CRYSTAL_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_CRYSTAL"}							
+						]
+				},
+
+		"TEDQ1_CRYSTAL_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_CRYSTAL_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_CRYSTAL"}							
+						]
+				},
+
+
+		"TEDQ2_CRYSTAL":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_CRYSTAL",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ2_CRYSTAL_RIGHT"},
+							{"constraint":"","edge":"TEDQ2_CRYSTAL_WRONG"}
+						]
+				},
+
+		"TEDQ2_CRYSTAL_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_CRYSTAL_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_CRYSTAL"}							
+						]
+				},
+
+		"TEDQ2_CRYSTAL_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_CRYSTAL_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_CRYSTAL"}							
+						]
+                },
+                
+		"TEDQ3_CRYSTAL":{"COMMENT":"Feature Focus",
+				"type":"module", 
+				"name":"TEDQ3_CRYSTAL",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ4_CRYSTAL"}
+						]
+				},
+
+		"TEDQ4_CRYSTAL":{"COMMENT":"Explain Why this is a good way...  Open ended",
+				"type":"module", 
+				"name":"TEDQ4_CRYSTAL",
+				"edges":
+						[													
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+        "COMMENT1":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+
+		"TEDQ1_SODA":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_SODA",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ1_SODA_RIGHT"},
+							{"constraint":"","edge":"TEDQ1_SODA_WRONG"}
+						]
+				},
+
+		"TEDQ1_SODA_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_SODA_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_SODA"}							
+						]
+				},
+
+		"TEDQ1_SODA_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_SODA_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_SODA"}							
+						]
+				},
+
+
+		"TEDQ2_SODA":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_SODA",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ2_SODA_RIGHT"},
+							{"constraint":"","edge":"TEDQ2_SODA_WRONG"}
+						]
+				},
+
+		"TEDQ2_SODA_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_SODA_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_SODA"}							
+						]
+				},
+
+		"TEDQ2_SODA_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_SODA_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_SODA"}							
+						]
+                },
+                
+		"TEDQ3_SODA":{"COMMENT":"Feature Focus",
+				"type":"module", 
+				"name":"TEDQ3_SODA",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ4_SODA"}
+						]
+				},
+
+		"TEDQ4_SODA":{"COMMENT":"Explain Why this is a good way...  Open ended",
+				"type":"module", 
+				"name":"TEDQ4_SODA",
+				"edges":
+						[													
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+
+        "COMMENT2":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+
+
+		"TEDQ1_ICEMELT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_ICEMELT",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ1_ICEMELT_RIGHT"},
+							{"constraint":"","edge":"TEDQ1_ICEMELT_WRONG"}
+						]
+				},
+
+		"TEDQ1_ICEMELT_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_ICEMELT_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_ICEMELT"}							
+						]
+				},
+
+		"TEDQ1_ICEMELT_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_ICEMELT_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_ICEMELT"}							
+						]
+				},
+
+
+		"TEDQ2_ICEMELT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_ICEMELT",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ2_ICEMELT_RIGHT"},
+							{"constraint":"","edge":"TEDQ2_ICEMELT_WRONG"}
+						]
+				},
+
+		"TEDQ2_ICEMELT_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_ICEMELT_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_ICEMELT"}							
+						]
+				},
+
+		"TEDQ2_ICEMELT_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_ICEMELT_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_ICEMELT"}							
+						]
+                },
+                
+		"TEDQ3_ICEMELT":{"COMMENT":"Feature Focus",
+				"type":"module", 
+				"name":"TEDQ3_ICEMELT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ4_ICEMELT"}
+						]
+				},
+
+		"TEDQ4_ICEMELT":{"COMMENT":"Explain Why this is a good way...  Open ended",
+				"type":"module", 
+				"name":"TEDQ4_ICEMELT",
+				"edges":
+						[													
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+
+        "COMMENT3":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+
+
+		"TEDQ1_BALLOON":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_BALLOON",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ1_BALLOON_RIGHT"},
+							{"constraint":"","edge":"TEDQ1_BALLOON_WRONG"}
+						]
+				},
+
+		"TEDQ1_BALLOON_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_BALLOON_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_BALLOON"}							
+						]
+				},
+
+		"TEDQ1_BALLOON_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_BALLOON_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_BALLOON"}							
+						]
+				},
+
+
+		"TEDQ2_BALLOON":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_BALLOON",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ2_BALLOON_RIGHT"},
+							{"constraint":"","edge":"TEDQ2_BALLOON_WRONG"}
+						]
+				},
+
+		"TEDQ2_BALLOON_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_BALLOON_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_BALLOON"}							
+						]
+				},
+
+		"TEDQ2_BALLOON_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_BALLOON_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_BALLOON"}							
+						]
+                },
+                
+		"TEDQ3_BALLOON":{"COMMENT":"Feature Focus",
+				"type":"module", 
+				"name":"TEDQ3_BALLOON",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ4_BALLOON"}
+						]
+				},
+
+		"TEDQ4_BALLOON":{"COMMENT":"Explain Why this is a good way...  Open ended",
+				"type":"module", 
+				"name":"TEDQ4_BALLOON",
+				"edges":
+						[													
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+
+        "COMMENT4":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+
+
+		"TEDQ1_RAMPS":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_RAMPS",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ1_RAMPS_RIGHT"},
+							{"constraint":"","edge":"TEDQ1_RAMPS_WRONG"}
+						]
+				},
+
+		"TEDQ1_RAMPS_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_RAMPS_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_RAMPS"}							
+						]
+				},
+
+		"TEDQ1_RAMPS_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_RAMPS_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_RAMPS"}							
+						]
+				},
+
+
+		"TEDQ2_RAMPS":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_RAMPS",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ2_RAMPS_RIGHT"},
+							{"constraint":"","edge":"TEDQ2_RAMPS_WRONG"}
+						]
+				},
+
+		"TEDQ2_RAMPS_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_RAMPS_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_RAMPS"}							
+						]
+				},
+
+		"TEDQ2_RAMPS_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_RAMPS_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_RAMPS"}							
+						]
+                },
+                
+		"TEDQ3_RAMPS":{"COMMENT":"Feature Focus",
+				"type":"module", 
+				"name":"TEDQ3_RAMPS",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ4_RAMPS"}
+						]
+				},
+
+		"TEDQ4_RAMPS":{"COMMENT":"Explain Why this is a good way...  Open ended",
+				"type":"module", 
+				"name":"TEDQ4_RAMPS",
+				"edges":
+						[													
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+
+        "COMMENT5":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+
+
+		"TEDQ1_SINKING":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_SINKING",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ1_SINKING_RIGHT"},
+							{"constraint":"","edge":"TEDQ1_SINKING_WRONG"}
+						]
+				},
+
+		"TEDQ1_SINKING_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_SINKING_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_SINKING"}							
+						]
+				},
+
+		"TEDQ1_SINKING_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_SINKING_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_SINKING"}							
+						]
+				},
+
+
+		"TEDQ2_SINKING":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_SINKING",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ2_SINKING_RIGHT"},
+							{"constraint":"","edge":"TEDQ2_SINKING_WRONG"}
+						]
+				},
+
+		"TEDQ2_SINKING_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_SINKING_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_SINKING"}							
+						]
+				},
+
+		"TEDQ2_SINKING_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_SINKING_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_SINKING"}							
+						]
+                },
+                
+		"TEDQ3_SINKING":{"COMMENT":"Feature Focus",
+				"type":"module", 
+				"name":"TEDQ3_SINKING",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ4_SINKING"}
+						]
+				},
+
+		"TEDQ4_SINKING":{"COMMENT":"Explain Why this is a good way...  Open ended",
+				"type":"module", 
+				"name":"TEDQ4_SINKING",
+				"edges":
+						[													
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+
+        "COMMENT6":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+
+
+		"TEDQ1_GRHOUSE":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_GRHOUSE",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ1_GRHOUSE_RIGHT"},
+							{"constraint":"","edge":"TEDQ1_GRHOUSE_WRONG"}
+						]
+				},
+
+		"TEDQ1_GRHOUSE_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_GRHOUSE_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_GRHOUSE"}							
+						]
+				},
+
+		"TEDQ1_GRHOUSE_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_GRHOUSE_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_GRHOUSE"}							
+						]
+				},
+
+
+		"TEDQ2_GRHOUSE":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_GRHOUSE",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ2_GRHOUSE_RIGHT"},
+							{"constraint":"","edge":"TEDQ2_GRHOUSE_WRONG"}
+						]
+				},
+
+		"TEDQ2_GRHOUSE_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_GRHOUSE_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_GRHOUSE"}							
+						]
+				},
+
+		"TEDQ2_GRHOUSE_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_GRHOUSE_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_GRHOUSE"}							
+						]
+                },
+                
+		"TEDQ3_GRHOUSE":{"COMMENT":"Feature Focus",
+				"type":"module", 
+				"name":"TEDQ3_GRHOUSE",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ4_GRHOUSE"}
+						]
+				},
+
+		"TEDQ4_GRHOUSE":{"COMMENT":"Explain Why this is a good way...  Open ended",
+				"type":"module", 
+				"name":"TEDQ4_GRHOUSE",
+				"edges":
+						[													
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+
+        "COMMENT7":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
+
+
+		"TEDQ1_ALGAE":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_ALGAE",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ1_ALGAE_RIGHT"},
+							{"constraint":"","edge":"TEDQ1_ALGAE_WRONG"}
+						]
+				},
+
+		"TEDQ1_ALGAE_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_ALGAE_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_ALGAE"}							
+						]
+				},
+
+		"TEDQ1_ALGAE_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ1_ALGAE_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ2_ALGAE"}							
+						]
+				},
+
+
+		"TEDQ2_ALGAE":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_ALGAE",
+				"edges":
+						[													
+							{"constraint":"CORRECT","edge":"TEDQ2_ALGAE_RIGHT"},
+							{"constraint":"","edge":"TEDQ2_ALGAE_WRONG"}
+						]
+				},
+
+		"TEDQ2_ALGAE_RIGHT":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_ALGAE_RIGHT",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_ALGAE"}							
+						]
+				},
+
+		"TEDQ2_ALGAE_WRONG":{"COMMENT":"TED Intro",
+				"type":"module", 
+				"name":"TEDQ2_ALGAE_WRONG",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ3_ALGAE"}							
+						]
+                },
+                
+		"TEDQ3_ALGAE":{"COMMENT":"Feature Focus",
+				"type":"module", 
+				"name":"TEDQ3_ALGAE",
+				"edges":
+						[													
+							{"constraint":"","edge":"TEDQ4_ALGAE"}
+						]
+				},
+
+		"TEDQ4_ALGAE":{"COMMENT":"Explain Why this is a good way...  Open ended",
+				"type":"module", 
+				"name":"TEDQ4_ALGAE",
+				"edges":
+						[													
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+
+
+
 
 		"END_CLOAK":{ "COMMENT":"End Cloak - Allows LogManager to gracefully shutdown the session",
 					"type":"module", 
@@ -48,7 +694,7 @@
 			"reuse":true,			
 			"scenes":		
 			[
-				{"title":"", "page":"", "name":"SNavigator", "classname":"EFMod_TEDInstr.Navigator", "features":"", "enqueue":"false" , "create":"true" , "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null" }
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SNavigator", "classname":"EFMod_TEDInstr.Navigator", "features":"", "enqueue":"false" , "create":"true" , "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null" }
 			]
 		},	
 			
@@ -58,37 +704,647 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"Science Area Selection", "page":"", "name":"SScene1a"  , "classname":"EFMod_TEDInstr.Scene1a",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor",         "page":"", "name":"SScene1"   , "classname":"EFMod_TEDInstr.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor",         "page":"", "name":"SScene2"   , "classname":"EFMod_TEDInstr.Scene2",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor",         "page":"", "name":"SScene3"   , "classname":"EFMod_TEDInstr.Scene3",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor",         "page":"", "name":"SScene4"   , "classname":"EFMod_TEDInstr.Scene4",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor",         "page":"", "name":"SScene5"   , "classname":"EFMod_TEDInstr.Scene5",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor",         "page":"", "name":"SScene6"   , "classname":"EFMod_TEDInstr.Scene6",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-
-                {"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_Crystal.RQenumVars",  "hostname":"EFMod_TEDInstr",  "features":"FTR_CRYSTAL", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_Soda.RQenumVars",     "hostname":"EFMod_TEDInstr",  "features":"FTR_SODA",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_IceMelt.RQenumVars",  "hostname":"EFMod_TEDInstr",  "features":"FTR_ICEMELT", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},                            
-                {"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_Balloon.RQenumVars",  "hostname":"EFMod_TEDInstr",  "features":"FTR_BALLOON", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_Ramps.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"FTR_RAMPS",   "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_Sinking.RQenumVars",  "hostname":"EFMod_TEDInstr",  "features":"FTR_SINKING", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},                                                                                                
-                {"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_GrHouse.RQenumVars",  "hostname":"EFMod_TEDInstr",  "features":"FTR_GRHOUSE", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor",         "page":"", "name":"SScene7"   , "classname":"EFMod_Algae.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"FTR_ALGAE",   "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
-                
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1a"  , "classname":"EFMod_TEDInstr.Scene1a",  "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1"   , "classname":"EFMod_TEDInstr.Scene1",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene2"   , "classname":"EFMod_TEDInstr.Scene2",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene3"   , "classname":"EFMod_TEDInstr.Scene3",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene4"   , "classname":"EFMod_TEDInstr.Scene4",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene5"   , "classname":"EFMod_TEDInstr.Scene5",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene6"   , "classname":"EFMod_TEDInstr.Scene6",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
-		},
-	
+        },
+
+
+		"COMMENT1":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+
+        "TEDQ1_CRYSTAL": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_Crystal.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_Crystal.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_Crystal.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ1_CRYSTAL_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_Crystal.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ1_CRYSTAL_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_Crystal.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_CRYSTAL": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_Crystal.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_CRYSTAL_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_Crystal.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ2_CRYSTAL_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_Crystal.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ3_CRYSTAL": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Crystal.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ4_CRYSTAL": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Crystal.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+
+		"COMMENT2A":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+
+
+        "TEDQ1_SODA": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_Soda.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_Soda.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ1_SODA_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ1_SODA_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_SODA": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_SODA_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ2_SODA_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ3_SODA": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ4_SODA": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+
+		"COMMENT2":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+        
+
+        "TEDQ1_ICEMELT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_IceMelt.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_IceMelt.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_IceMelt.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ1_ICEMELT_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_IceMelt.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ1_ICEMELT_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_IceMelt.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_ICEMELT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_IceMelt.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_ICEMELT_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_IceMelt.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ2_ICEMELT_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_IceMelt.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ3_ICEMELT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_IceMelt.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ4_ICEMELT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_IceMelt.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+
+		"COMMENT3":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+
+
+        "TEDQ1_BALLOON": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_Balloon.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_Balloon.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_Balloon.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ1_BALLOON_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_Balloon.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ1_BALLOON_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_Balloon.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_BALLOON": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_Balloon.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_BALLOON_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_Balloon.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ2_BALLOON_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_Balloon.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ3_BALLOON": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Balloon.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ4_BALLOON": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Balloon.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+
+		"COMMENT4":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+
+
+        "TEDQ1_RAMPS": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_Ramps.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_Ramps.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_Ramps.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ1_RAMPS_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_Ramps.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ1_RAMPS_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_Ramps.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_RAMPS": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_Ramps.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_RAMPS_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_Ramps.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ2_RAMPS_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_Ramps.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ3_RAMPS": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Ramps.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ4_RAMPS": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Ramps.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+
+        "COMMENT5":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+
+
+        "TEDQ1_SINKING": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_Sinking.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_Sinking.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_Sinking.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ1_SINKING_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_Sinking.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ1_SINKING_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_Sinking.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_SINKING": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_Sinking.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_SINKING_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_Sinking.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ2_SINKING_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_Sinking.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ3_SINKING": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Sinking.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ4_SINKING": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Sinking.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+
+		"COMMENT6":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+
+
+        "TEDQ1_GRHOUSE": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_GrHouse.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_GrHouse.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_GrHouse.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ1_GRHOUSE_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_GrHouse.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ1_GRHOUSE_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_GrHouse.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_GRHOUSE": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_GrHouse.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_GRHOUSE_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_GrHouse.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ2_GRHOUSE_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_GrHouse.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ3_GRHOUSE": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_GrHouse.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ4_GRHOUSE": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_GrHouse.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+
+		"COMMENT7":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+
+
+        "TEDQ1_ALGAE": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_Algae.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_Algae.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_Algae.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ1_ALGAE_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_Algae.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ1_ALGAE_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_Algae.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_ALGAE": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_Algae.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2_ALGAE_RIGHT": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_Algae.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+        "TEDQ2_ALGAE_WRONG": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_Algae.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ3_ALGAE": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Algae.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ4_ALGAE": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Algae.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        
+		"COMMENT8":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+
+        
 		"END_CLOAK":
 		{
 			"instanceNode":"",
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_TEDInstr.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SSceneEnd"  , "classname":"EFMod_TEDInstr.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		
 	},
+
 
 	"CModuleGroups":
 	{
