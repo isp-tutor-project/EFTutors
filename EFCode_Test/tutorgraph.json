@@ -14,7 +14,7 @@
 					
 		"_nav":{"COMMENT":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Navigation Components preload node - used to force nav scene creation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
 				"type":"module",
-				"name":"base",
+				"link":"base",
 				"edges":
 						[
 						]
@@ -22,7 +22,7 @@
 			
 		"root":{"COMMENT":"Standard Start Screen",
 				"type":"module", 
-				"name":"start",
+				"link":"start",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}							
@@ -31,7 +31,7 @@
 
 		"END_CLOAK":{ "COMMENT":"End Cloak - Allows LogManager to gracefully shutdown the session",
 					"type":"module", 
-					"name":"END_CLOAK",
+					"link":"END_CLOAK",
 					"edges":
 							[
 							]

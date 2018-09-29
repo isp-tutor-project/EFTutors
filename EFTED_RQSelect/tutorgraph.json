@@ -14,7 +14,7 @@
         "nav_loader":{
             "COMMENT":"%%%%%%%%%%%%%%%% Navigation Components preload node - used to force nav scene creation %%%%%%%%%%%%%%%%%%%%",
             "type":"module",
-            "name":"nav_loader",
+            "link":"nav_loader",
             "edges":
                     [
                     ]
@@ -22,7 +22,7 @@
                     
 		"root":{"COMMENT":"Introduction to tutor",
 				"type":"module", 
-				"name":"start",
+				"link":"start",
 				"edges":
                     [													
                         {"constraint":"","edge":"CHOOSE_AREA"}							
@@ -32,7 +32,7 @@
 		"CHOOSE_AREA":{
                 "COMMENT":"Area of Science Selection Sequence",
 				"type":"module", 
-				"name":"CHOOSE_AREA",
+				"link":"CHOOSE_AREA",
 				"edges":
                     [													
                         {"constraint":"","edge":"CHOOSE_TOPIC"}							
@@ -42,7 +42,7 @@
 		"CHOOSE_TOPIC":{
                 "COMMENT":"Topic within Research Area Selection Sequence",
 				"type":"module", 
-				"name":"CHOOSE_TOPIC",
+				"link":"CHOOSE_TOPIC",
 				"edges":
                     [													
                         {"constraint":"","edge":"CHOOSE_RQ"}							
@@ -52,7 +52,7 @@
 		"CHOOSE_RQ":{
                 "COMMENT":"Research Question Selection Sequence",
 				"type":"module", 
-				"name":"CHOOSE_RQ",
+				"link":"CHOOSE_RQ",
 				"edges":
                     [											                        
                         {"constraint":"CHANGE_RQ","edge":"CHOOSE_RQ" },
@@ -66,7 +66,7 @@
 		"SUMMARY":{
                 "COMMENT":"Research Question Selection Sequence",
 				"type":"module", 
-				"name":"SUMMARY",
+				"link":"SUMMARY",
 				"edges":
                     [											                        
                         {"constraint":"","edge":"END_CLOAK"}							
@@ -75,7 +75,7 @@
 
 		"END_CLOAK":{ "COMMENT":"End Cloak - Allows LogManager to gracefully shutdown the session",
 					"type":"module", 
-					"name":"END_CLOAK",
+					"link":"END_CLOAK",
 					"edges":
 							[
 							]

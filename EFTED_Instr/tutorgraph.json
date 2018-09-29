@@ -1,9 +1,10 @@
 {
 	"type":"graph",
 	"history":"volatile",
-	"name":"TED ISP",
+    "name":"TED ISP",
+    
+	"hostModule":"EFMod_TEDInstr",
 	"version":"0.1.0",
-	"namespace":"TED ISP TUTOR",
 
 
 	"CNodes":
@@ -14,7 +15,7 @@
 					
 		"nav_loader":{"COMMENT":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Navigation Components preload node - used to force nav scene creation %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
 				"type":"module",
-				"name":"base",
+				"link":"base",
 				"edges":
 						[
 						]
@@ -25,8 +26,9 @@
                 
 
 		"root":{"COMMENT":"TED Intro",
+				"id":"TED_INTRO",
 				"type":"module", 
-				"name":"start",
+				"link":"TED_INTRO",
 				"edges":
 						[													
 							{"constraint":"FTR_CRYSTAL","edge":"TEDQ1_CRYSTAL"},
@@ -47,7 +49,8 @@
 
 		"TEDQ1_CRYSTAL":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_CRYSTAL",
+				"link":"TEDQ1_CRYSTAL",
+				"id":"TEDQ1",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ1_CRYSTAL_RIGHT"},
@@ -57,7 +60,8 @@
 
 		"TEDQ1_CRYSTAL_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_CRYSTAL_RIGHT",
+				"link":"TEDQ1_CRYSTAL_RIGHT",
+				"id":"TEDQ1_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_CRYSTAL"}							
@@ -66,7 +70,8 @@
 
 		"TEDQ1_CRYSTAL_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_CRYSTAL_WRONG",
+				"link":"TEDQ1_CRYSTAL_WRONG",
+				"id":"TEDQ1_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_CRYSTAL"}							
@@ -76,7 +81,8 @@
 
 		"TEDQ2_CRYSTAL":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_CRYSTAL",
+				"link":"TEDQ2_CRYSTAL",
+				"id":"TEDQ2",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ2_CRYSTAL_RIGHT"},
@@ -86,7 +92,8 @@
 
 		"TEDQ2_CRYSTAL_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_CRYSTAL_RIGHT",
+				"link":"TEDQ2_CRYSTAL_RIGHT",
+				"id":"TEDQ2_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_CRYSTAL"}							
@@ -95,7 +102,8 @@
 
 		"TEDQ2_CRYSTAL_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_CRYSTAL_WRONG",
+				"link":"TEDQ2_CRYSTAL_WRONG",
+				"id":"TEDQ2_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_CRYSTAL"}							
@@ -104,7 +112,8 @@
                 
 		"TEDQ3_CRYSTAL":{"COMMENT":"Feature Focus",
 				"type":"module", 
-				"name":"TEDQ3_CRYSTAL",
+				"link":"TEDQ3_CRYSTAL",
+				"id":"TEDQ3",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ4_CRYSTAL"}
@@ -113,7 +122,8 @@
 
 		"TEDQ4_CRYSTAL":{"COMMENT":"Explain Why this is a good way...  Open ended",
 				"type":"module", 
-				"name":"TEDQ4_CRYSTAL",
+				"link":"TEDQ4_CRYSTAL",
+				"id":"TEDQ4",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}
@@ -122,57 +132,75 @@
 
         "COMMENT1":"%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%***",
 
-		"TEDQ1_SODA":{"COMMENT":"TED Intro",
+		"TEDQ1_SODA":{"COMMENT":"Think about the students problem...",
 				"type":"module", 
-				"name":"TEDQ1_SODA",
+				"link":"TEDQ1_SODA",
+				"id":"TEDQ1",
 				"edges":
 						[													
-							{"constraint":"CORRECT","edge":"TEDQ1_SODA_RIGHT"},
-							{"constraint":"","edge":"TEDQ1_SODA_WRONG"}
+							{"constraint":"CORRECT",  "edge":"TEDQ1_SODA_RIGHT"},
+							{"constraint":"INCORRECT","edge":"TEDQ1_SODA_WRONG"},
+							{"constraint":"","edge":"TEDQ1_SODA"}
 						]
 				},
 
-		"TEDQ1_SODA_RIGHT":{"COMMENT":"TED Intro",
+		"TEDQ1_SODA_RIGHT":{"COMMENT":"Right...",
 				"type":"module", 
-				"name":"TEDQ1_SODA_RIGHT",
+				"link":"TEDQ1_SODA_RIGHT",
+				"id":"TEDQ1_RIGHT",
 				"edges":
 						[													
-							{"constraint":"","edge":"TEDQ2_SODA"}							
+							{"constraint":"","edge":"TEDQ2INTRO_SODA"}							
 						]
 				},
 
-		"TEDQ1_SODA_WRONG":{"COMMENT":"TED Intro",
+		"TEDQ1_SODA_WRONG":{"COMMENT":"Actually...",
 				"type":"module", 
-				"name":"TEDQ1_SODA_WRONG",
+				"link":"TEDQ1_SODA_WRONG",
+				"id":"TEDQ1_WRONG",
 				"edges":
 						[													
-							{"constraint":"","edge":"TEDQ2_SODA"}							
+							{"constraint":"","edge":"TEDQ2INTRO_SODA"}							
 						]
 				},
 
 
-		"TEDQ2_SODA":{"COMMENT":"TED Intro",
+		"TEDQ2INTRO_SODA":{"COMMENT":"The result may either be the same or different...",
 				"type":"module", 
-				"name":"TEDQ2_SODA",
+				"link":"TEDQ2INTRO_SODA",
+				"id":"TEDQ2",
 				"edges":
 						[													
-							{"constraint":"CORRECT","edge":"TEDQ2_SODA_RIGHT"},
-							{"constraint":"","edge":"TEDQ2_SODA_WRONG"}
+							{"constraint":"","edge":"TEDQ2_SODA"}
 						]
 				},
 
-		"TEDQ2_SODA_RIGHT":{"COMMENT":"TED Intro",
+		"TEDQ2_SODA":{"COMMENT":"Imagine the result were...",
 				"type":"module", 
-				"name":"TEDQ2_SODA_RIGHT",
+				"link":"TEDQ2_SODA",
+				"id":"TEDQ2",
+				"edges":
+						[													
+							{"constraint":"CORRECT",  "edge":"TEDQ2_SODA_RIGHT"},
+							{"constraint":"INCORRECT","edge":"TEDQ2_SODA_WRONG"},
+							{"constraint":"","edge":"TEDQ2_SODA"}
+						]
+				},
+
+		"TEDQ2_SODA_RIGHT":{"COMMENT":"Right...",
+				"type":"module", 
+				"link":"TEDQ2_SODA_RIGHT",
+				"id":"TEDQ2_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_SODA"}							
 						]
 				},
 
-		"TEDQ2_SODA_WRONG":{"COMMENT":"TED Intro",
+		"TEDQ2_SODA_WRONG":{"COMMENT":"Actually...",
 				"type":"module", 
-				"name":"TEDQ2_SODA_WRONG",
+				"link":"TEDQ2_SODA_WRONG",
+				"id":"TEDQ2_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_SODA"}							
@@ -181,7 +209,8 @@
                 
 		"TEDQ3_SODA":{"COMMENT":"Feature Focus",
 				"type":"module", 
-				"name":"TEDQ3_SODA",
+				"link":"TEDQ3_SODA",
+				"id":"TEDQ3",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ4_SODA"}
@@ -190,7 +219,8 @@
 
 		"TEDQ4_SODA":{"COMMENT":"Explain Why this is a good way...  Open ended",
 				"type":"module", 
-				"name":"TEDQ4_SODA",
+				"link":"TEDQ4_SODA",
+				"id":"TEDQ4",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}
@@ -203,7 +233,8 @@
 
 		"TEDQ1_ICEMELT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_ICEMELT",
+				"link":"TEDQ1_ICEMELT",
+				"id":"TEDQ1",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ1_ICEMELT_RIGHT"},
@@ -213,7 +244,8 @@
 
 		"TEDQ1_ICEMELT_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_ICEMELT_RIGHT",
+				"link":"TEDQ1_ICEMELT_RIGHT",
+				"id":"TEDQ1_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_ICEMELT"}							
@@ -222,7 +254,8 @@
 
 		"TEDQ1_ICEMELT_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_ICEMELT_WRONG",
+				"link":"TEDQ1_ICEMELT_WRONG",
+				"id":"TEDQ1_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_ICEMELT"}							
@@ -232,7 +265,8 @@
 
 		"TEDQ2_ICEMELT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_ICEMELT",
+				"link":"TEDQ2_ICEMELT",
+				"id":"TEDQ2",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ2_ICEMELT_RIGHT"},
@@ -242,7 +276,8 @@
 
 		"TEDQ2_ICEMELT_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_ICEMELT_RIGHT",
+				"link":"TEDQ2_ICEMELT_RIGHT",
+				"id":"TEDQ2_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_ICEMELT"}							
@@ -251,7 +286,8 @@
 
 		"TEDQ2_ICEMELT_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_ICEMELT_WRONG",
+				"link":"TEDQ2_ICEMELT_WRONG",
+				"id":"TEDQ2_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_ICEMELT"}							
@@ -260,7 +296,8 @@
                 
 		"TEDQ3_ICEMELT":{"COMMENT":"Feature Focus",
 				"type":"module", 
-				"name":"TEDQ3_ICEMELT",
+				"link":"TEDQ3_ICEMELT",
+				"id":"TEDQ3",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ4_ICEMELT"}
@@ -269,7 +306,8 @@
 
 		"TEDQ4_ICEMELT":{"COMMENT":"Explain Why this is a good way...  Open ended",
 				"type":"module", 
-				"name":"TEDQ4_ICEMELT",
+				"link":"TEDQ4_ICEMELT",
+				"id":"TEDQ4",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}
@@ -282,7 +320,8 @@
 
 		"TEDQ1_BALLOON":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_BALLOON",
+				"link":"TEDQ1_BALLOON",
+				"id":"TEDQ1",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ1_BALLOON_RIGHT"},
@@ -292,7 +331,8 @@
 
 		"TEDQ1_BALLOON_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_BALLOON_RIGHT",
+				"link":"TEDQ1_BALLOON_RIGHT",
+				"id":"TEDQ1_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_BALLOON"}							
@@ -301,7 +341,8 @@
 
 		"TEDQ1_BALLOON_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_BALLOON_WRONG",
+				"link":"TEDQ1_BALLOON_WRONG",
+				"id":"TEDQ1_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_BALLOON"}							
@@ -311,7 +352,8 @@
 
 		"TEDQ2_BALLOON":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_BALLOON",
+				"link":"TEDQ2_BALLOON",
+				"id":"TEDQ2",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ2_BALLOON_RIGHT"},
@@ -321,7 +363,8 @@
 
 		"TEDQ2_BALLOON_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_BALLOON_RIGHT",
+				"link":"TEDQ2_BALLOON_RIGHT",
+				"id":"TEDQ2_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_BALLOON"}							
@@ -330,7 +373,8 @@
 
 		"TEDQ2_BALLOON_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_BALLOON_WRONG",
+				"link":"TEDQ2_BALLOON_WRONG",
+				"id":"TEDQ2_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_BALLOON"}							
@@ -339,7 +383,8 @@
                 
 		"TEDQ3_BALLOON":{"COMMENT":"Feature Focus",
 				"type":"module", 
-				"name":"TEDQ3_BALLOON",
+				"link":"TEDQ3_BALLOON",
+				"id":"TEDQ3",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ4_BALLOON"}
@@ -348,7 +393,8 @@
 
 		"TEDQ4_BALLOON":{"COMMENT":"Explain Why this is a good way...  Open ended",
 				"type":"module", 
-				"name":"TEDQ4_BALLOON",
+				"link":"TEDQ4_BALLOON",
+				"id":"TEDQ4",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}
@@ -361,7 +407,8 @@
 
 		"TEDQ1_RAMPS":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_RAMPS",
+				"link":"TEDQ1_RAMPS",
+				"id":"TEDQ1",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ1_RAMPS_RIGHT"},
@@ -371,7 +418,8 @@
 
 		"TEDQ1_RAMPS_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_RAMPS_RIGHT",
+				"link":"TEDQ1_RAMPS_RIGHT",
+				"id":"TEDQ1_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_RAMPS"}							
@@ -380,7 +428,8 @@
 
 		"TEDQ1_RAMPS_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_RAMPS_WRONG",
+				"link":"TEDQ1_RAMPS_WRONG",
+				"id":"TEDQ1_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_RAMPS"}							
@@ -390,7 +439,8 @@
 
 		"TEDQ2_RAMPS":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_RAMPS",
+				"link":"TEDQ2_RAMPS",
+				"id":"TEDQ2",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ2_RAMPS_RIGHT"},
@@ -400,7 +450,8 @@
 
 		"TEDQ2_RAMPS_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_RAMPS_RIGHT",
+				"link":"TEDQ2_RAMPS_RIGHT",
+				"id":"TEDQ2_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_RAMPS"}							
@@ -409,7 +460,8 @@
 
 		"TEDQ2_RAMPS_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_RAMPS_WRONG",
+				"link":"TEDQ2_RAMPS_WRONG",
+				"id":"TEDQ2_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_RAMPS"}							
@@ -418,7 +470,8 @@
                 
 		"TEDQ3_RAMPS":{"COMMENT":"Feature Focus",
 				"type":"module", 
-				"name":"TEDQ3_RAMPS",
+				"link":"TEDQ3_RAMPS",
+				"id":"TEDQ3",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ4_RAMPS"}
@@ -427,7 +480,8 @@
 
 		"TEDQ4_RAMPS":{"COMMENT":"Explain Why this is a good way...  Open ended",
 				"type":"module", 
-				"name":"TEDQ4_RAMPS",
+				"link":"TEDQ4_RAMPS",
+				"id":"TEDQ4",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}
@@ -440,7 +494,8 @@
 
 		"TEDQ1_SINKING":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_SINKING",
+				"link":"TEDQ1_SINKING",
+				"id":"TEDQ1",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ1_SINKING_RIGHT"},
@@ -450,7 +505,8 @@
 
 		"TEDQ1_SINKING_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_SINKING_RIGHT",
+				"link":"TEDQ1_SINKING_RIGHT",
+				"id":"TEDQ1_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_SINKING"}							
@@ -459,7 +515,8 @@
 
 		"TEDQ1_SINKING_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_SINKING_WRONG",
+				"link":"TEDQ1_SINKING_WRONG",
+				"id":"TEDQ1_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_SINKING"}							
@@ -469,7 +526,8 @@
 
 		"TEDQ2_SINKING":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_SINKING",
+				"link":"TEDQ2_SINKING",
+				"id":"TEDQ2",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ2_SINKING_RIGHT"},
@@ -479,7 +537,8 @@
 
 		"TEDQ2_SINKING_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_SINKING_RIGHT",
+				"link":"TEDQ2_SINKING_RIGHT",
+				"id":"TEDQ2_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_SINKING"}							
@@ -488,7 +547,8 @@
 
 		"TEDQ2_SINKING_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_SINKING_WRONG",
+				"link":"TEDQ2_SINKING_WRONG",
+				"id":"TEDQ2_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_SINKING"}							
@@ -497,7 +557,8 @@
                 
 		"TEDQ3_SINKING":{"COMMENT":"Feature Focus",
 				"type":"module", 
-				"name":"TEDQ3_SINKING",
+				"link":"TEDQ3_SINKING",
+				"id":"TEDQ3",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ4_SINKING"}
@@ -506,7 +567,8 @@
 
 		"TEDQ4_SINKING":{"COMMENT":"Explain Why this is a good way...  Open ended",
 				"type":"module", 
-				"name":"TEDQ4_SINKING",
+				"link":"TEDQ4_SINKING",
+				"id":"TEDQ4",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}
@@ -519,7 +581,8 @@
 
 		"TEDQ1_GRHOUSE":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_GRHOUSE",
+				"link":"TEDQ1_GRHOUSE",
+				"id":"TEDQ1",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ1_GRHOUSE_RIGHT"},
@@ -529,7 +592,8 @@
 
 		"TEDQ1_GRHOUSE_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_GRHOUSE_RIGHT",
+				"link":"TEDQ1_GRHOUSE_RIGHT",
+				"id":"TEDQ1_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_GRHOUSE"}							
@@ -538,7 +602,8 @@
 
 		"TEDQ1_GRHOUSE_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_GRHOUSE_WRONG",
+				"link":"TEDQ1_GRHOUSE_WRONG",
+				"id":"TEDQ1_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_GRHOUSE"}							
@@ -548,7 +613,8 @@
 
 		"TEDQ2_GRHOUSE":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_GRHOUSE",
+				"link":"TEDQ2_GRHOUSE",
+				"id":"TEDQ2",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ2_GRHOUSE_RIGHT"},
@@ -558,7 +624,8 @@
 
 		"TEDQ2_GRHOUSE_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_GRHOUSE_RIGHT",
+				"link":"TEDQ2_GRHOUSE_RIGHT",
+				"id":"TEDQ2_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_GRHOUSE"}							
@@ -567,7 +634,8 @@
 
 		"TEDQ2_GRHOUSE_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_GRHOUSE_WRONG",
+				"link":"TEDQ2_GRHOUSE_WRONG",
+				"id":"TEDQ2_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_GRHOUSE"}							
@@ -576,7 +644,8 @@
                 
 		"TEDQ3_GRHOUSE":{"COMMENT":"Feature Focus",
 				"type":"module", 
-				"name":"TEDQ3_GRHOUSE",
+				"link":"TEDQ3_GRHOUSE",
+				"id":"TEDQ3",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ4_GRHOUSE"}
@@ -585,7 +654,8 @@
 
 		"TEDQ4_GRHOUSE":{"COMMENT":"Explain Why this is a good way...  Open ended",
 				"type":"module", 
-				"name":"TEDQ4_GRHOUSE",
+				"link":"TEDQ4_GRHOUSE",
+				"id":"TEDQ4",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}
@@ -598,7 +668,8 @@
 
 		"TEDQ1_ALGAE":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_ALGAE",
+				"link":"TEDQ1_ALGAE",
+				"id":"TEDQ1",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ1_ALGAE_RIGHT"},
@@ -608,7 +679,8 @@
 
 		"TEDQ1_ALGAE_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_ALGAE_RIGHT",
+				"link":"TEDQ1_ALGAE_RIGHT",
+				"id":"TEDQ1_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_ALGAE"}							
@@ -617,7 +689,8 @@
 
 		"TEDQ1_ALGAE_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ1_ALGAE_WRONG",
+				"link":"TEDQ1_ALGAE_WRONG",
+				"id":"TEDQ1_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ2_ALGAE"}							
@@ -627,7 +700,8 @@
 
 		"TEDQ2_ALGAE":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_ALGAE",
+				"link":"TEDQ2_ALGAE",
+				"id":"TEDQ2",
 				"edges":
 						[													
 							{"constraint":"CORRECT","edge":"TEDQ2_ALGAE_RIGHT"},
@@ -637,7 +711,8 @@
 
 		"TEDQ2_ALGAE_RIGHT":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_ALGAE_RIGHT",
+				"link":"TEDQ2_ALGAE_RIGHT",
+				"id":"TEDQ2_RIGHT",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_ALGAE"}							
@@ -646,7 +721,8 @@
 
 		"TEDQ2_ALGAE_WRONG":{"COMMENT":"TED Intro",
 				"type":"module", 
-				"name":"TEDQ2_ALGAE_WRONG",
+				"link":"TEDQ2_ALGAE_WRONG",
+				"id":"TEDQ2_WRONG",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ3_ALGAE"}							
@@ -655,7 +731,8 @@
                 
 		"TEDQ3_ALGAE":{"COMMENT":"Feature Focus",
 				"type":"module", 
-				"name":"TEDQ3_ALGAE",
+				"link":"TEDQ3_ALGAE",
+				"id":"TEDQ3",
 				"edges":
 						[													
 							{"constraint":"","edge":"TEDQ4_ALGAE"}
@@ -664,7 +741,8 @@
 
 		"TEDQ4_ALGAE":{"COMMENT":"Explain Why this is a good way...  Open ended",
 				"type":"module", 
-				"name":"TEDQ4_ALGAE",
+				"link":"TEDQ4_ALGAE",
+				"id":"TEDQ4",
 				"edges":
 						[													
 							{"constraint":"","edge":"END_CLOAK"}
@@ -677,7 +755,7 @@
 
 		"END_CLOAK":{ "COMMENT":"End Cloak - Allows LogManager to gracefully shutdown the session",
 					"type":"module", 
-					"name":"END_CLOAK",
+					"link":"END_CLOAK",
 					"edges":
 							[
 							]
@@ -698,7 +776,7 @@
 			]
 		},	
 			
-		"start":
+		"TED_INTRO":
 		{
 			"instanceNode":"",
 			"reuse":true,
@@ -802,7 +880,7 @@
                 {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene7"   , "classname":"EFMod_Soda.RQenumVars",    "hostname":"EFMod_TEDInstr",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 {"title":"", "page":"", "isanchor":true,  "copyof":"",  "name":"SScene8"   , "classname":"EFMod_Soda.TEDExpt",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
-                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene9"   , "classname":"EFMod_Soda.TEDQuest1",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 
@@ -811,7 +889,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene10"  , "classname":"EFMod_Soda.TEDQuest1AB",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
         "TEDQ1_SODA_WRONG": {
@@ -819,7 +897,16 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene11"  , "classname":"EFMod_Soda.TEDQuest1AB",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDQ2INTRO_SODA": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_Soda.TEDQuest4",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 
@@ -828,7 +915,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12"   , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene12A"   , "classname":"EFMod_Soda.TEDQuest4AB",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 
@@ -837,7 +924,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene13"  , "classname":"EFMod_Soda.TEDQuest4AB",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
         "TEDQ2_SODA_WRONG": {
@@ -845,7 +932,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene8",  "name":"SScene14"  , "classname":"EFMod_Soda.TEDQuest4AB",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 
