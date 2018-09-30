@@ -31,7 +31,10 @@
 				"link":"TED_INTRO",
 				"edges":
 						[													
-							{"constraint":"FTR_CRYSTAL","edge":"TEDQ1_CRYSTAL"},
+                            {"constraint":"FTR_CRYSTAL","edge":"TEDQ1_CRYSTAL"},
+                            
+                            {"constraint":"FTR_SODA",   "edge":"TEDQ3_SODA"},
+                            
 							{"constraint":"FTR_SODA",   "edge":"TEDQ1_SODA"},
 							{"constraint":"FTR_ICEMELT","edge":"TEDQ1_ICEMELT"},
 							{"constraint":"FTR_BALLOON","edge":"TEDQ1_BALLOON"},
@@ -782,13 +785,13 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1a"  , "classname":"EFMod_TEDInstr.Scene1a",  "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1a"  , "classname":"EFMod_TEDInstr.Scene1a",  "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1"   , "classname":"EFMod_TEDInstr.Scene1",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene2"   , "classname":"EFMod_TEDInstr.Scene2",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene3"   , "classname":"EFMod_TEDInstr.Scene3",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene4"   , "classname":"EFMod_TEDInstr.Scene4",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene5"   , "classname":"EFMod_TEDInstr.Scene5",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene6"   , "classname":"EFMod_TEDInstr.Scene6",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene6"   , "classname":"EFMod_TEDInstr.Scene6",   "features":"A", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
         },
 
@@ -941,7 +944,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_TEDInstr.Scene15",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 
@@ -950,7 +953,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_Soda.TEDQuest",       "hostname":"EFMod_TEDInstr",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_TEDInstr.TEDQuest",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 
