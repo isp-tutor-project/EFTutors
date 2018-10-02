@@ -36,7 +36,7 @@ namespace EFTut_Suppl.$GLOBAL {
                     }
                     break;
 
-                case "TEDQ4":
+                case "TEDQ2":
                     switch(constrainId) {
                         
                         case "CORRECT":
@@ -45,6 +45,21 @@ namespace EFTut_Suppl.$GLOBAL {
 
                         case "INCORRECT":
                             result = !this.getModuleValue("Expt1_Q4").value;                                        
+                            break;
+
+                        default:
+                            break;
+                    }
+                    break;
+
+                case "TEDQ4":
+                    switch(constrainId) {
+                        
+                        case "TEDEXP1":
+                            let value = this.getModuleValue("TED_EXPT");                                        
+                            this.setModuleValue("TED_EXPT", "TEDEXP2");                                        
+
+                            result = value === "TEDEXP1";
                             break;
 
                         default:

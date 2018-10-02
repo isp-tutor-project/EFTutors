@@ -220,12 +220,24 @@
 						]
 				},
 
-		"TEDQ4_SODA":{"COMMENT":"Explain Why this is a good way...  Open ended",
+		"TEDQ4_SODA":{"COMMENT":"Please correct this experiment by clicking in the table....",
 				"type":"module", 
 				"link":"TEDQ4_SODA",
 				"id":"TEDQ4",
 				"edges":
-						[													
+						[							
+							{"constraint":"TEDEXP1","edge":"TEDQ1_SODA"},
+							{"constraint":"","edge":"END_CLOAK"}
+						]
+				},
+
+		"TEDQ5_SODA":{"COMMENT":"Explain why this is a good way to...",
+				"type":"module", 
+				"link":"TEDQ5_SODA",
+				"id":"TEDQ5",
+				"edges":
+						[							
+							{"constraint":"TEDEXP1","edge":"TEDQ1_SODA"},
 							{"constraint":"","edge":"END_CLOAK"}
 						]
 				},
@@ -944,7 +956,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_TEDInstr.Scene15",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":true, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_TEDInstr.Scene15",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 
@@ -953,10 +965,18 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene15"   , "classname":"EFMod_TEDInstr.TEDQuest",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene15",  "name":"SScene16" , "classname":"EFMod_TEDInstr.Scene16",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 
+        "TEDQ5_SODA": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene15",  "name":"SScene17"   , "classname":"EFMod_TEDInstr.Scene17",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
 
 		"COMMENT2":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
         
