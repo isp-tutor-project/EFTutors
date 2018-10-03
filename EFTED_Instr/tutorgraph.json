@@ -32,10 +32,7 @@
 				"edges":
 						[													
                             {"constraint":"FTR_CRYSTAL","edge":"TEDQ1_CRYSTAL"},
-                            
-                            {"constraint":"FTR_SODA",   "edge":"TEDQ3_SODA"},
-                            
-							{"constraint":"FTR_SODA",   "edge":"TEDQ1_SODA"},
+							{"constraint":"FTR_SODA",   "edge":"TEDQ3_SODA"},
 							{"constraint":"FTR_ICEMELT","edge":"TEDQ1_ICEMELT"},
 							{"constraint":"FTR_BALLOON","edge":"TEDQ1_BALLOON"},
 							{"constraint":"FTR_RAMPS",  "edge":"TEDQ1_RAMPS"},
@@ -227,7 +224,7 @@
 				"edges":
 						[							
 							{"constraint":"TEDEXP1","edge":"TEDQ1_SODA"},
-							{"constraint":"","edge":"END_CLOAK"}
+							{"constraint":"","edge":"TEDQ5_SODA"}
 						]
 				},
 
