@@ -1,6 +1,6 @@
 namespace EFTut_Suppl.$GLOBAL {
 
-    // These mixins execute within the CTutorDoc scope
+    // These GLOBAL mixins execute within the CTutorDoc scope
     // 
     export class $GLOBAL {
 
@@ -9,19 +9,44 @@ namespace EFTut_Suppl.$GLOBAL {
         // on syntax like => this[<element name>]
         // 
         [key: string]: any;
-       
 
-        public $nodeConstraint(nodeId:string, constrainId:string) : boolean {
+
+        public $preEnterScene(scene:any) : void {
+
+            scene.setBreadCrumbs(scene.name);
+        }        
+
+        public $preExitScene(scene:any) : void {
+
+            switch(scene.name) {
+
+                case "SScene17":
+
+                    if(this.testFeatures("FTR_TEDEXP1")) {
+
+                        this.delFeature("FTR_TEDEXP1");
+                        this.addFeature("FTR_TEDEXP2");
+                    }
+                    break;
+            }
+        }        
+
+        public $nodeConstraint(nodeId:string, constraintId:string) : boolean {
 
             let result:boolean = false;
 
             switch(nodeId) {
+
+                case "RQ_DEVSELECTOR": 
+                    result = this.testFeatures(constraintId);           
+                    break;
+
                 case "TED_INTRO":
-                    result = this.testFeatures(constrainId);           
+                    result = this.testFeatures(constraintId);           
                     break;
 
                 case "TEDQ1":
-                    switch(constrainId) {
+                    switch(constraintId) {
 
                         case "CORRECT":
                             result = this.getModuleValue("Expt1_Q1").value;                                        
@@ -37,7 +62,7 @@ namespace EFTut_Suppl.$GLOBAL {
                     break;
 
                 case "TEDQ2":
-                    switch(constrainId) {
+                    switch(constraintId) {
                         
                         case "CORRECT":
                             result = this.getModuleValue("Expt1_Q4").value;                                        
@@ -52,26 +77,24 @@ namespace EFTut_Suppl.$GLOBAL {
                     }
                     break;
 
-                case "TEDQ4":
-                    switch(constrainId) {
+                case "TEDQ5":
+                    switch(constraintId) {
                         
-                        case "TEDEXP1":
-                            let value = this.getModuleValue("TED_EXPT");                                        
-                            this.setModuleValue("TED_EXPT", "TEDEXP2");                                        
+                        case "FTR_TEDEXP1":
 
-                            result = value === "TEDEXP1";
+                            result = this.testFeatures(constraintId);                
                             break;
 
                         default:
                             break;
                     }
                     break;
-
+                    
                 default: 
                     break;
             }
 
-            switch(constrainId) {
+            switch(constraintId) {
                 default:
                     break;
             }
