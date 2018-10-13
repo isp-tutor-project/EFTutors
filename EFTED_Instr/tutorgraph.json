@@ -34,6 +34,7 @@
                         {"constraint":"FTR_VECTOR2",   "edge":"TEDQ1"},
                         {"constraint":"FTR_VECTOR3",   "edge":"TEDQ3"},
                         {"constraint":"FTR_VECTOR4",   "edge":"TEDQ3"},                            
+                        {"constraint":"FTR_VECTOR5",   "edge":"TEDPOSTINTRO"},                            
 
                         {"constraint":"","edge":"SCENE1"}												
                     ]
@@ -153,6 +154,37 @@
 				"edges":
 						[							
 							{"constraint":"FTR_TEDEXP1","edge":"TEDQ1"},
+							{"constraint":"","edge":"TEDPOSTINTRO"}
+						]
+				},
+
+		"TEDPOSTINTRO":{"COMMENT":"You will now design experiments on your own...",
+				"type":"module", 
+				"link":"TEDPOSTINTRO",
+				"id":"TEDPOSTINTRO",
+				"edges":
+						[							
+							{"constraint":"","edge":"TEDPOST"}
+						]
+				},
+
+		"TEDPOST":{"COMMENT":"Design an experiment to ...",
+				"type":"module", 
+				"link":"TEDPOST",
+				"id":"TEDPOST",
+				"edges":
+						[							
+							{"constraint":"POSTTEST","edge":"TEDPOST"},
+							{"constraint":"","edge":"TEDSUMMARY"}
+						]
+				},
+
+		"TEDSUMMARY":{"COMMENT":"TED Wrap up summary...",
+				"type":"module", 
+				"link":"TEDSUMMARY",
+				"id":"TEDSUMMARY",
+				"edges":
+						[							
 							{"constraint":"","edge":"END_CLOAK"}
 						]
 				},
@@ -302,6 +334,34 @@
 			"scenes":		
 			[
                 {"title":"", "page":"", "isanchor":false, "copyof":"SScene15",  "name":"SScene17"   , "classname":"EFMod_TEDInstr.Scene17",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDPOSTINTRO": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene18"   , "classname":"EFMod_TEDInstr.Scene18",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDPOST": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":true, "copyof":"",  "name":"SScene19"   , "classname":"EFMod_TEDInstr.Scene19",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"", "page":"", "isanchor":false, "copyof":"SScene19",  "name":"SScene20"   , "classname":"EFMod_TEDInstr.Scene20",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+        "TEDSUMMARY": {
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene21"   , "classname":"EFMod_TEDInstr.Scene21",  "features":"",    "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
             ]
         },
 

@@ -89,6 +89,20 @@ namespace EFTut_Suppl.$GLOBAL {
                             break;
                     }
                     break;
+
+                case "TEDPOST":
+                    switch(constraintId) {
+                        
+                        case "POSTTEST":
+                            let PTVarray = this.getModuleValue("TEDExptPOSTSequence"); 
+
+                            result = PTVarray.length > 0;
+                            break;
+
+                        default:
+                            break;
+                    }
+                    break;                    
                     
                 default: 
                     break;
