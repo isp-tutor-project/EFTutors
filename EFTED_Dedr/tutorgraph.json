@@ -59,8 +59,8 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"Start of Tutor", "page":"", "name":"SStart"   , "classname":"EFMod_DedReason.Start", "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"SIntro"   , "classname":"EFMod_DedReason.Intro", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"SStart"   , "classname":"EFMod_DedReason.SceneStart", "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"SIntro"   , "classname":"EFMod_DedReason.Intro",      "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 
 				{"title":"Start of Tutor", "page":"", "name":"SScene1"   , "classname":"EFMod_DedReason.Scene1", "features":"", "enqueue":"true", "create":"false", "persist":"true", "ischeckpnt":"true", "object":"null"},
 				{"title":"Start of Tutor", "page":"", "name":"SScene2"   , "classname":"EFMod_DedReason.Scene1", "features":"", "enqueue":"true", "create":"false", "persist":"true", "ischeckpnt":"true", "object":"null"},
@@ -81,7 +81,7 @@
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_DedReason.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_DedReason.SceneEnd", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		

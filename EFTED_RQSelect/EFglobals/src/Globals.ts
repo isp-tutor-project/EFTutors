@@ -8,27 +8,33 @@ namespace EFTut_Suppl.$GLOBAL {
         // on syntax like => this[<element name>]
         // 
         [key: string]: any;
-       
+
+        
+        public $preEnterScene(scene:any) : void {
+
+            scene.setBreadCrumbs(scene.name);
+        }        
+
         // Global Tutor Graph Constraints
         // 
-        public $nodeConstraint(constrainId:string) : boolean {
+        public $nodeConstraint(nodeId:string, constraintId:string) : boolean {
 
             let result:boolean = false;
 
             let RQconf = this.getModuleValue("RQconfirmation");       
 
-            switch(constrainId) {
+            switch(constraintId) {
 
                 case "CHANGE_RQ":
-                    if(RQconf === constrainId)
+                    if(RQconf === constraintId)
                                         result = true;
                     break;
                 case "CHANGE_TOPIC":
-                    if(RQconf === constrainId)
+                    if(RQconf === constraintId)
                                         result = true;
                     break;
                 case "CHANGE_AREA":
-                    if(RQconf === constrainId)
+                    if(RQconf === constraintId)
                                         result = true;
                     break;
             }

@@ -10,5 +10,11 @@ namespace EFTut_Suppl.$GLOBAL {
         // 
         [key: string]: any;
 
+        public $preEnterScene(scene:any) : void {
+
+            scene.setBreadCrumbs(scene.name);
+        }        
+
+
    }
 }

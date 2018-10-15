@@ -102,6 +102,8 @@
 			"reuse":true,
 			"scenes":		
 			[
+                {"title":"Start of Tutor", "page":"", "name":"SSceneStart"   , "classname":"EFMod_RQSelect.SceneStart", "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
 				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1",  "classname":"EFMod_RQSelect.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
         },
@@ -226,7 +228,7 @@
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SSceneEnd"  , "classname":"EFMod_RQSelect.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SSceneEnd"  , "classname":"EFMod_RQSelect.SceneEnd", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		

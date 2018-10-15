@@ -59,6 +59,7 @@
 			"reuse":true,
 			"scenes":		
 			[
+                {"title":"Start of Tutor", "page":"", "name":"SSceneStart"  , "classname":"EFMod_TEDIntro.SceneStart",    "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 				{"title":"Start of Tutor", "page":"", "name":"SScene1"   , "classname":"EFMod_TEDIntro.TedIntro", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},
@@ -69,7 +70,7 @@
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_TEDIntro.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_TEDIntro.SceneEnd", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		

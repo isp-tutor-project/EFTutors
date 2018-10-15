@@ -59,7 +59,7 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"Start of Tutor", "page":"", "name":"SScene1"      , "classname":"EFMod_MatsSurvey.Scene1",    "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"SSceneStart"  , "classname":"EFMod_MatsSurvey.SceneStart",    "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 {"title":"Start of Tutor", "page":"", "name":"SMatsIntro"   , "classname":"EFMod_MatsSurvey.MatsIntro", "features":"",        "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 
 				{"title":"Start of Tutor", "page":"", "name":"SMatsPre1"   , "classname":"EFMod_MatsSurvey.Mats1", "features":"FTR_PRE", "enqueue":"true", "create":"false", "persist":"true", "ischeckpnt":"true", "object":"null"},
@@ -80,7 +80,7 @@
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_MatsSurvey.EndCloak", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "name":"SSceneEnd"  , "classname":"EFMod_MatsSurvey.SceneEnd", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		
