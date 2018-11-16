@@ -25,7 +25,19 @@
 				"link":"start",
 				"edges":
                     [													
-                        {"constraint":"","edge":"CHOOSE_AREA"}							
+                        {"constraint":"FTR_BASELINE","edge":"BASE_LINE_INTRO"},
+                        {"constraint":"","edge":"CHOOSE_AREA"}
+                    ]
+				},
+
+
+		"BASE_LINE_INTRO":{
+                "COMMENT":"Area of Science Selection Sequence",
+				"type":"module", 
+				"link":"BASE_LINE_INTRO",
+				"edges":
+                    [													                        
+                        {"constraint":"","edge":"EXPT_DEMO"}
                     ]
 				},
 
@@ -34,8 +46,8 @@
 				"type":"module", 
 				"link":"CHOOSE_AREA",
 				"edges":
-                    [													
-                        {"constraint":"","edge":"CHOOSE_TOPIC"}							
+                    [													                        
+                        {"constraint":"","edge":"CHOOSE_TOPIC"}
                     ]
 				},
 
@@ -45,7 +57,18 @@
 				"link":"CHOOSE_TOPIC",
 				"edges":
                     [													
-                        {"constraint":"","edge":"CHOOSE_RQ"}							
+                        {"constraint":"","edge":"EXPT_DEMO"}
+                    ]
+				},
+
+		"EXPT_DEMO":{
+                "COMMENT":"Experiment Explication Sequence",
+				"type":"module", 
+				"link":"EXPT_DEMO",
+				"edges":
+                    [													
+                        {"constraint":"FTR_BASELINE","edge":"SUMMARY"},
+                        {"constraint":"","edge":"CHOOSE_RQ"}
                     ]
 				},
 
@@ -59,7 +82,7 @@
                         {"constraint":"CHANGE_TOPIC","edge":"CHOOSE_TOPIC" },
                         {"constraint":"CHANGE_AREA","edge":"CHOOSE_AREA" },
 
-                        {"constraint":"","edge":"SUMMARY"}							
+                        {"constraint":"","edge":"SUMMARY"}
                     ]
 				},
 
@@ -69,7 +92,7 @@
 				"link":"SUMMARY",
 				"edges":
                     [											                        
-                        {"constraint":"","edge":"END_CLOAK"}							
+                        {"constraint":"","edge":"END_CLOAK"}
                     ]
 				},
 
@@ -102,11 +125,21 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"Start of Tutor", "page":"", "name":"SSceneStart"   , "classname":"EFMod_RQSelect.SceneStart", "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-
-				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1",  "classname":"EFMod_RQSelect.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"WEB Start Page- Audio Requirement", "page":"", "name":"SSceneStart"  , "classname":"EFMod_RQSelect.SceneStart",    "features":"FTR_WEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
         },
+
+		"BASE_LINE_INTRO":
+		{
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"", "page":"", "name":"SSceneBL"   , "classname":"EFMod_RQSelect.SceneBL", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+			]
+        },
+
+
 
 		"CHOOSE_AREA":
 		{
@@ -114,7 +147,9 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene2",  "classname":"EFMod_RQSelect.Scene2",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1",  "classname":"EFMod_RQSelect.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene2",  "classname":"EFMod_RQSelect.Scene2",   "features":"FTR_PASS1", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene2a",  "classname":"EFMod_RQSelect.Scene2",   "features":"FTR_PASS2", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
         },
 
@@ -124,7 +159,16 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene3",  "classname":"EFMod_RQSelect.Scene3",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene3",  "classname":"EFMod_RQSelect.Scene3",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+		"EXPT_DEMO":
+		{
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
 				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene4",  "classname":"EFMod_RQSelect.Scene4",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
                 {"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene5",  "classname":"EFMod_Crystal.RQintro1",    "hostname":"EFMod_RQSelect",  "features":"FTR_CRYSTAL", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
@@ -208,7 +252,7 @@
 			"scenes":		
 			[
 				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene9",  "classname":"EFMod_RQSelect.Scene9",    "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene10", "classname":"EFMod_RQSelect.Scene10",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene10", "classname":"EFMod_RQSelect.Scene10",   "features":"FTR_CHOICE", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
         },
 

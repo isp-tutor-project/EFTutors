@@ -59,7 +59,8 @@
 			"reuse":true,
 			"scenes":		
 			[
-                {"title":"Start of Tutor", "page":"", "name":"SSceneStart"  , "classname":"EFMod_TEDIntro.SceneStart",    "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"WEB Start Page- Audio Requirement", "page":"", "name":"SSceneStart"  , "classname":"EFMod_TEDIntro.SceneStart",    "features":"FTR_WEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+
 				{"title":"Start of Tutor", "page":"", "name":"SScene1"   , "classname":"EFMod_TEDIntro.TedIntro", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},

@@ -1,0 +1,239 @@
+{
+    "users": [
+        {
+            "userName": "KRISTINHO_Jul_21",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A1"
+            },
+            "moduleState": {
+                "selectedArea.index": 1,
+                "selectedArea.ontologyKey": "STBL_A1|name",
+                "selectedTopic.index": 2,
+                "selectedTopic.ontologyKey": "STBL_A1_T2|name",
+                "selectedVariable.index": 2,
+                "selectedVariable.ontologyKey": "STBL_A1_T2_V2|name"
+            },
+            "features": [
+                "FTR_SODA",
+                "FTR_CHOICE"
+            ]
+        },
+        {
+            "userName": "AARYAHEV_SEP_1",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A1"
+            },
+            "moduleState": {
+                "selectedArea.index": 3,
+                "selectedArea.ontologyKey": "STBL_A3|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A3_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A3_T1_V1|name"
+            },
+            "features": [
+                "FTR_RAMPS",
+                "FTR_CHOICE"
+            ]
+        },
+        {
+            "userName": "AALIYAHBR_DEC_31",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A1"
+            },
+            "moduleState": {
+                "selectedArea.index": 1,
+                "selectedArea.ontologyKey": "STBL_A1|name",
+                "selectedTopic.index": 2,
+                "selectedTopic.ontologyKey": "STBL_A1_T2|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A1_T2_V1|name"
+            },
+            "features": [
+                "FTR_SODA",
+                "FTR_CHOICE"
+            ]
+        },
+        {
+            "userName": "OLIVERRO_OCT_23",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A2"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A4|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A4_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A4_T1_V1|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_NOCHOICE"
+            ]
+        },
+        {
+            "userName": "BRANDONWA_JUL_26",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A2"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A4|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A4_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A4_T1_V1|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_NOCHOICE"
+            ]
+        },
+        {
+            "userName": "TAMYAGI_FEB_17",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A2"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A4|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A4_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A4_T1_V1|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_NOCHOICE"
+            ]
+        },
+        {
+            "userName": "SANNIAHTA_MAY_9",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A3"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A4|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A4_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A4_T1_V1|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_BASELINE"
+            ]
+        },
+        {
+            "userName": "DONYESI_JUL_18",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A1"
+            },
+            "moduleState": {
+                "selectedArea.index": 1,
+                "selectedArea.ontologyKey": "STBL_A1|name",
+                "selectedTopic.index": 2,
+                "selectedTopic.ontologyKey": "STBL_A1_T2|name",
+                "selectedVariable.index": 3,
+                "selectedVariable.ontologyKey": "STBL_A1_T2_V3|name"
+            },
+            "features": [
+                "FTR_SODA",
+                "FTR_CHOICE"
+            ]
+        },
+        {
+            "userName": "MICHAELWA_JUL_26",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A3"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A4|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A4_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A4_T1_V1|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_BASELINE"
+            ]
+        },
+        {
+            "userName": "STORYDI_AUG_2",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A2"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A4|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A4_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A4_T1_V1|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_NOCHOICE"
+            ]
+        },
+        {
+            "userName": "BRIANNAHE_DEC_19",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A1"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A1|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A1_T1|name",
+                "selectedVariable.index": 2,
+                "selectedVariable.ontologyKey": "STBL_A1_T1_V2|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_CHOICE"
+            ]
+        },
+        {
+            "userName": "SHANESC_JAN_20",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A3"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A4|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A4_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A4_T1_V1|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_BASELINE"
+            ]
+        },
+        {
+            "userName": "KEVINWI_DEC_27",
+            "tutorState": {
+                "experimentalGroup.ontologyKey": "EG_A3"
+            },
+            "moduleState": {
+                "selectedArea.index": 4,
+                "selectedArea.ontologyKey": "STBL_A4|name",
+                "selectedTopic.index": 1,
+                "selectedTopic.ontologyKey": "STBL_A4_T1|name",
+                "selectedVariable.index": 1,
+                "selectedVariable.ontologyKey": "STBL_A4_T1_V1|name"
+            },
+            "features": [
+                "FTR_GRHOUSE",
+                "FTR_BASELINE",
+                "FTR_DEV"
+            ]
+        }
+    ]
+}
