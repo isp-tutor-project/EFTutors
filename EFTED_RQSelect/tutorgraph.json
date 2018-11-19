@@ -127,7 +127,7 @@
 			[
                 {"title":"WEB Start Page- Audio Requirement", "page":"", "name":"SSceneStart"  , "classname":"EFMod_RQSelect.SceneStart",    "features":"FTR_WEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
-				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1",  "classname":"EFMod_RQSelect.Scene1",   "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1",  "classname":"EFMod_RQSelect.Scene1",   "features":"!FTR_BASELINE", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
         },
 
