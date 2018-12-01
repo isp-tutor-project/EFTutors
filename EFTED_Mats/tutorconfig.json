@@ -1,3 +1,4 @@
 {
-	"dependencies": ["EFMod_MatsSurvey"]
+    "dependencies": ["EFMod_MatsSurvey"],
+    "tutorStateID": "MATS"
 }

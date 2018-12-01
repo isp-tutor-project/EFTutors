@@ -1,3 +1,4 @@
 {
-	"dependencies": ["EFMod_DedReason"]
+    "dependencies": ["EFMod_DedReason"],
+    "tutorStateID": "DEDR"
 }

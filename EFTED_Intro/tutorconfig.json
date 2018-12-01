@@ -1,3 +1,4 @@
 {
-	"dependencies": ["EFMod_TEDIntro"]
+    "dependencies": ["EFMod_TEDIntro"],
+    "tutorStateID": "TEDINTRO"
 }
