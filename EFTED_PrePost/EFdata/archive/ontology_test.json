@@ -1,0 +1,45 @@
+{
+    
+    
+    "eft:AreasOfScience": {
+        "eft:description":"",
+        "eft:titlename":"Areas of science",
+        "eft:visualObj": null,
+        "rdf:subclasses": ["eft:PhysicsChemistry", "eft:HeatTemperature", "eft:ForcesMotion", "eft:PlantGrowth"],
+        "rdf:instances": []
+     },
+     
+     "eft:PhysicsChemistry": {
+        "eft:description":"",
+        "eft:titlename":"Physics-Chemistry",
+        "eft:visualObj": null,
+        "rdf:subclasses": [],
+        "rdf:instances": ["eft:CrystalGrowth", "eft:SodaMintReaction"]
+     },
+
+     "eft:CrystalGrowth": {
+        "eft:description":"",
+        "eft:titlename":"Crystal Growth",
+        "eft:visualObj": null,
+        "rdf:subclasses": [],
+        "rdf:instances": [],
+        "rdf:properties": ["eft:WaterTemperature"]
+     },
+
+     "eft:WaterTemperature": {
+        "eft:titlename":"Water Temperature",
+        "eft:visualClass": "$mRQCrystalsX.TC_Exprt_Crystals",
+        "rdf:instances": ["eft:WaterHot","eft:WaterCold"]
+    },
+
+    "eft:WaterHot": {
+        "eft:visualOf": ["eft:WaterTemperature"],
+        "eft:jarInstance": "$mRQCrystalsX.TC_Exprt_Crystals.Svar1a"
+    },
+
+    "efv:WaterHot": {
+        "eft:visualOf": ["eft:WaterTemperature"],
+        "eft:jarInstance": "$mRQCrystalsX.TC_Exprt_Crystals.Svar1b"
+    }
+
+}

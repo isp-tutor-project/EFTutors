@@ -13,6 +13,54 @@ namespace EFTut_Suppl.$GLOBAL {
 
         public $preEnterScene(scene:any) : void {
 
+            switch (scene.name) {
+                case "SScene1":
+                case "SScene2":
+                    scene.setProgress(1,1);
+                    break;
+
+                case "SScene3":
+                case "SScene4":
+                case "SScene5":
+                case "SScene6":
+                    scene.setProgress(1,2);
+                    break;
+
+                case "SScene7":
+                case "SScene8":
+                case "SScene9":
+                case "SScene10":
+                case "SScene11":
+                case "SScene12":
+                case "SScene12A":
+                case "SScene13":
+                case "SScene14":
+                case "SScene15":
+                case "SScene16":
+                case "SScene17":
+                case "SScene18":
+            
+                    if(this.testFeatures("FTR_TEDEXP1")) scene.setProgress(2,1);
+                                                    else scene.setProgress(3,1);
+                    break;
+                    
+                case "SScene19":
+                case "SScene20":
+
+                    let PTVarray = this.getModuleValue("TEDExptPOSTSequence"); 
+
+                    scene.setProgress(7 - PTVarray.length, 1);
+                    break;
+
+                case "SScene21":
+                    scene.setProgress(7,2);
+                    break;
+
+                default:
+                    scene.hideProgress();
+                    break;
+            }
+
             scene.setBreadCrumbs(scene.name);
         }        
 

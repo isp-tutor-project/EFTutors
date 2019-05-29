@@ -13,6 +13,15 @@ namespace EFTut_Suppl.$GLOBAL {
         public $preEnterScene(scene:any) : void {
 
             scene.setBreadCrumbs(scene.name);
+
+            switch(scene.name) {
+                case "test":
+                    break;
+
+                default:
+                    scene.hideProgress();
+                    break;
+            }
         }        
 
         // Global Tutor Graph Constraints

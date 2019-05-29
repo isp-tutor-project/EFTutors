@@ -1,14 +1,13 @@
 {
 	"type":"graph",
 	"history":"volatile",
-	"name":"TED Final",
+    "name":"Story Pre-Post",
+    
+	"hostModule":"EFMod_PrePost",
 	"version":"0.1.0",
-	"namespace":"TED Final",
-
-
+	
 	"CNodes":
 	{	
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CNodes  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CNodes  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 
 				
@@ -42,7 +41,6 @@
 	"CModules":
 	{		
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModules  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 	
 		"base":
 		{
@@ -50,9 +48,7 @@
 			"reuse":true,			
 			"scenes":		
 			[
-				{"title":"", "page":"", "name":"SoundCheck", 		"classname":"EFMod_SignIn.SoundCheck"	, "features":"null", "enqueue":"false", "create":"false", "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"", "page":"", "name":"SignIn", 			"classname":"EFMod_SignIn.SignIn"		, "features":"null", "enqueue":"false", "create":"false", "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"},		
-				{"title":"", "page":"", "name":"HeadPhoneCheck"  , "classname":"EFMod_SignIn.HeadPhoneCheck", "features":"null", "enqueue":"true" , "create":"true", "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "name":"SNavigator",   "classname":"EFMod_PrePost.Navigator", "features":"null", "enqueue":"false" , "create":"true" , "visible":"true", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},	
 			
@@ -62,9 +58,9 @@
 			"reuse":true,
 			"scenes":		
 			[
-				{"title":"Start of Tutor", "page":"", "name":"Scene1"   , "classname":"EFMod_SceneTest.Scene1", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor", "page":"", "name":"Scene2"   , "classname":"EFMod_SceneTest.Scene2", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-				{"title":"Start of Tutor", "page":"", "name":"Scene3"   , "classname":"EFMod_SceneTest.Scene3", "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"Start of Tutor", "page":"", "name":"TQ1APart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ1APart1",  "hostname":"EFMod_PrePost",    "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"TQ1APart1B" , "isanchor":false,  "copyof":"TQ1APart1",  "classname":"EFMod_PrePost.TQ1APart1B", "hostname":"EFMod_PrePost",    "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"TQ1APart2"  , "isanchor":false,  "copyof":"TQ1APart1",  "classname":"EFMod_PrePost.TQ1APart2",  "hostname":"EFMod_PrePost",    "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		},
 	
@@ -83,7 +79,6 @@
 	"CModuleGroups":
 	{
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModuleGroups  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CModuleGroups  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 	
 		"solcom-modgrp":
 		{
@@ -100,13 +95,12 @@
 				{"instanceNode":"", "name":"SOLCOM_B"},
 				{"instanceNode":"", "name":"SOLCOM_C"}
 			]
-		},	
+        }
 	},
 
 
 	"CActions":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CActions  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CActions  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 	
 		"act0":{"cmd":"assertFeature",
@@ -125,7 +119,6 @@
 	"CConstraints":
 	{
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CConstraints  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CConstraints  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 			
 		"FTR_PRETEST":{"cmd":"test", "code":"FTR_PRETEST"},
 		"SKILL_R0_FAIL" :{"cmd":"exec","code":"{return (gTutor.ktSkills['rule0'].queryBelief() < 0.93);}"},
@@ -134,7 +127,6 @@
 
 	"CSubGraphs":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CSubGraphs  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CSubGraphs  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 			
 	},
@@ -142,14 +134,12 @@
 	
 	"CExternals":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CExternals  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CExternals  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CExternals  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 	},
 	
 	
 	"CSkills":
 	{
-		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CSkills  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 		"COMMENT":"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  CSkills  @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
 	
 		"rule0":

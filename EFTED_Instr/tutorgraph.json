@@ -36,6 +36,7 @@
                         {"constraint":"FTR_VECTOR4",   "edge":"TEDQ3"},                            
                         {"constraint":"FTR_VECTOR5",   "edge":"TEDPOSTINTRO"},                            
 
+                        {"constraint":"FTR_TED_720","edge":"TED_INTRO"},												
                         {"constraint":"","edge":"TED_R012"}												
                     ]
             },
@@ -47,6 +48,7 @@
                 "link":"TED_R012",
                 "edges":
                         [									                            
+                            {"constraint":"FTR_TED_1_6","edge":"END_CLOAK"},												
                             {"constraint":"","edge":"TED_INTRO"}
                         ]
                 },
@@ -230,7 +232,7 @@
 			[
                 {"title":"WEB Start Page- Audio Requirement", "page":"", "name":"SSceneStart"  , "classname":"EFMod_TEDInstr.SceneStart",    "features":"FTR_WEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 
-				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1a"  , "classname":"EFMod_TEDInstr.Scene1a",  "features":"FTR_WEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+				{"title":"", "page":"", "isanchor":false, "copyof":"",  "name":"SScene1a"  , "classname":"EFMod_TEDInstr.Scene1a",  "features":"FTR_DEV", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
         },
 

@@ -92,7 +92,6 @@
 				"link":"SUMMARY",
 				"edges":
                     [											                        
-                        {"constraint":"","edge":"END_CLOAK"}
                     ]
 				},
 
