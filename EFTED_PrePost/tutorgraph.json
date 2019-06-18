@@ -24,14 +24,62 @@
 				"type":"module", 
 				"link":"start",
 				"edges":
-						[													
-							{"constraint":"","edge":"END_CLOAK"}							
+						[					
+							{"constraint":"Q2BAD_SELECTED","edge":"Q2-BAD"},
+							{"constraint":"","edge":"Q3-4"}							
 						]
 				},
 
-		"END_CLOAK":{ "COMMENT":"End Cloak - Allows LogManager to gracefully shutdown the session",
+		"Q2-BAD":{"COMMENT":"",
+				"type":"module", 
+				"link":"Q2_BAD",
+				"edges":
+						[					
+							{"constraint":"","edge":"Q3-4"}							
+						]
+                },
+                
+		"Q3-4":{"COMMENT":"",
+				"type":"module", 
+				"link":"Q3_4",
+				"edges":
+						[					
+							{"constraint":"Q4BAD_SELECTED","edge":"Q4-BAD"},
+							{"constraint":"","edge":"Q5-6"}							
+						]
+                },
+
+		"Q4-BAD":{"COMMENT":"",
+				"type":"module", 
+				"link":"Q4_BAD",
+				"edges":
+						[					
+							{"constraint":"","edge":"Q5-6"}							
+						]
+                },
+                
+		"Q5-6":{"COMMENT":"",
+				"type":"module", 
+				"link":"Q5_6",
+				"edges":
+						[					
+							{"constraint":"Q6BAD_SELECTED","edge":"Q6-BAD"},
+							{"constraint":"","edge":"ASSESS"}							
+						]
+                },
+
+		"Q6-BAD":{"COMMENT":"",
+				"type":"module", 
+				"link":"Q6_BAD",
+				"edges":
+						[					
+							{"constraint":"","edge":"ASSESS"}							
+						]
+                },
+
+		"ASSESS":{ "COMMENT":"",
 					"type":"module", 
-					"link":"END_CLOAK",
+					"link":"ASSESS_SCENES",
 					"edges":
 							[
 							]
@@ -69,18 +117,35 @@
                 {"title":"Start of Tutor", "page":"", "name":"TQ1BPart1B" , "isanchor":false,  "copyof":"TQ1BPart1",  "classname":"EFMod_PrePost.TQ1BPart1B", "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 {"title":"Start of Tutor", "page":"", "name":"TQ1BPart2"  , "isanchor":false,  "copyof":"TQ1BPart1",  "classname":"EFMod_PrePost.TQ1BPart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
-
                 {"title":"Start of Tutor", "page":"", "name":"Q2Splash"  ,  "classname":"EFMod_PrePost.QSplashB",  "hostname":"EFMod_PrePost",    "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
                 {"title":"Start of Tutor", "page":"", "name":"TQ2APart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ2APart1",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 {"title":"Start of Tutor", "page":"", "name":"TQ2APart2"  , "isanchor":false,  "copyof":"TQ2APart1",  "classname":"EFMod_PrePost.TQ2APart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ2APart3"  , "isanchor":false,  "copyof":"TQ2APart1",  "classname":"EFMod_PrePost.TQ2APart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
                 {"title":"Start of Tutor", "page":"", "name":"TQ2BPart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ2BPart1",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ2BPart2"  , "isanchor":false,  "copyof":"TQ2BPart1",  "classname":"EFMod_PrePost.TQ2BPart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ2BPart3"  , "isanchor":false,  "copyof":"TQ2BPart1",  "classname":"EFMod_PrePost.TQ2BPart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"TQ2BPart2"  , "isanchor":false,  "copyof":"TQ2BPart1",  "classname":"EFMod_PrePost.TQ2BPart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
 
 
+
+		"Q2_BAD":
+		{
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"Start of Tutor", "page":"", "name":"TQ2APart3"  , "isanchor":false,  "copyof":"TQ2APart1",  "classname":"EFMod_PrePost.TQ2APart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"TQ2BPart3"  , "isanchor":false,  "copyof":"TQ2BPart1",  "classname":"EFMod_PrePost.TQ2BPart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
+
+		"Q3_4":
+		{
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
                 {"title":"Start of Tutor", "page":"", "name":"Q3Splash"  ,  "classname":"EFMod_PrePost.QSplashB",  "hostname":"EFMod_PrePost",    "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
                 {"title":"Start of Tutor", "page":"", "name":"TQ3APart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ3APart1",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
@@ -96,13 +161,29 @@
 
                 {"title":"Start of Tutor", "page":"", "name":"TQ4APart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ4APart1",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 {"title":"Start of Tutor", "page":"", "name":"TQ4APart2"  , "isanchor":false,  "copyof":"TQ4APart1",  "classname":"EFMod_PrePost.TQ4APart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ4APart3"  , "isanchor":false,  "copyof":"TQ4APart1",  "classname":"EFMod_PrePost.TQ4APart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
                 {"title":"Start of Tutor", "page":"", "name":"TQ4BPart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ4BPart1",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ4BPart2"  , "isanchor":false,  "copyof":"TQ4BPart1",  "classname":"EFMod_PrePost.TQ4BPart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ4BPart3"  , "isanchor":false,  "copyof":"TQ4BPart1",  "classname":"EFMod_PrePost.TQ4BPart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"TQ4BPart2"  , "isanchor":false,  "copyof":"TQ4BPart1",  "classname":"EFMod_PrePost.TQ4BPart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        }, 
 
+		"Q4_BAD":
+		{
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"Start of Tutor", "page":"", "name":"TQ4APart3"  , "isanchor":false,  "copyof":"TQ4APart1",  "classname":"EFMod_PrePost.TQ4APart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"TQ4BPart3"  , "isanchor":false,  "copyof":"TQ4BPart1",  "classname":"EFMod_PrePost.TQ4BPart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
 
+		"Q5_6":
+		{
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
                 {"title":"Start of Tutor", "page":"", "name":"Q5Splash"  ,  "classname":"EFMod_PrePost.QSplashB",  "hostname":"EFMod_PrePost",    "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
                 {"title":"Start of Tutor", "page":"", "name":"TQ5APart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ5APart1",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
@@ -118,26 +199,32 @@
 
                 {"title":"Start of Tutor", "page":"", "name":"TQ6APart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ6APart1",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
                 {"title":"Start of Tutor", "page":"", "name":"TQ6APart2"  , "isanchor":false,  "copyof":"TQ6APart1",  "classname":"EFMod_PrePost.TQ6APart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ6APart3"  , "isanchor":false,  "copyof":"TQ6APart1",  "classname":"EFMod_PrePost.TQ6APart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
 
                 {"title":"Start of Tutor", "page":"", "name":"TQ6BPart1"  , "isanchor":true,   "copyof":"",           "classname":"EFMod_PrePost.TQ6BPart1",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ6BPart2"  , "isanchor":false,  "copyof":"TQ6BPart1",  "classname":"EFMod_PrePost.TQ6BPart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Start of Tutor", "page":"", "name":"TQ6BPart3"  , "isanchor":false,  "copyof":"TQ6BPart1",  "classname":"EFMod_PrePost.TQ6BPart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-
-                {"title":"End",        "page":"", "name":"EndScene"   ,  "classname":"EFMod_PrePost.EndScene",  "hostname":"EFMod_PrePost",          "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Assessment", "page":"", "name":"AssessmentA",  "classname":"EFMod_PrePost.AssessmentA",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
-                {"title":"Assessment", "page":"", "name":"AssessmentB",  "classname":"EFMod_PrePost.AssessmentB",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}            
-
+                {"title":"Start of Tutor", "page":"", "name":"TQ6BPart2"  , "isanchor":false,  "copyof":"TQ6BPart1",  "classname":"EFMod_PrePost.TQ6BPart2",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
-		},
+        },
+        
+		"Q6_BAD":
+		{
+			"instanceNode":"",
+			"reuse":true,
+			"scenes":		
+			[
+                {"title":"Start of Tutor", "page":"", "name":"TQ6APart3"  , "isanchor":false,  "copyof":"TQ6APart1",  "classname":"EFMod_PrePost.TQ6APart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Start of Tutor", "page":"", "name":"TQ6BPart3"  , "isanchor":false,  "copyof":"TQ6BPart1",  "classname":"EFMod_PrePost.TQ6BPart3",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+            ]
+        },
 	
-		"END_CLOAK":
+		"ASSESS_SCENES":
 		{
 			"instanceNode":"",
 			"reuse":true,
 			"scenes":		
 			[	
-				{"title":"", "page":"", "name":"Scene4"  , "classname":"EFMod_SceneTest.Scene4", "features":"" , "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
+                {"title":"End",        "page":"", "name":"EndScene"   ,  "classname":"EFMod_PrePost.EndScene",  "hostname":"EFMod_PrePost",          "features":"", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Assessment", "page":"", "name":"AssessmentA",  "classname":"EFMod_PrePost.AssessmentA",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEA", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"},
+                {"title":"Assessment", "page":"", "name":"AssessmentB",  "classname":"EFMod_PrePost.AssessmentB",  "hostname":"EFMod_PrePost",    "features":"FTR_TYPEB", "enqueue":"true", "create":"false", "persist":"false", "ischeckpnt":"true", "object":"null"}
 			]
 		}		
 		
