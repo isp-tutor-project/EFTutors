@@ -9,5 +9,8 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {}
+  "devDependencies": {
+    "@types/createjs": "0.0.29",
+    "typescript": "^3.8.3"
+  }
 }
